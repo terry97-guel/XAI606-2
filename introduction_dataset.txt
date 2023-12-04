@@ -1,0 +1,57 @@
+1. project title
+
+efficient uncertainty estimation with a single neural network
+
+
+2. project introduction
+
+Uncertainty is a measure of how much confidence we lack in each output of a machine learning algorithm.
+
+In general, deep ensemble is the most popular method for estimating uncertainty
+
+Deep ensemble trains multiple models on the same task and estimates uncertainty using the degree of disagreement or variance of the outputs for the same input data.
+
+However, deep ensemble is computationally expensive. 
+
+Therefore, there has been recent research on methodologies that can achieve similar performance to deep ensemble but at a lower cost.
+
+MIMO is also a methodology for estimating uncertainty more effectively in terms of computational cost. 
+
+Short for multiple-input multiple-output, MIMO connects multiple heads to a single model and provides the same number of independent data as the number of heads as inputs to the model, with each head attempting to predict the output of its inputs.
+
+Traditionally, MIMO has only been used for image classification problems, but in this project we want to apply it to regression and eventually reinforcement learning problems.
+
+
+3. dataset descriptioon
+
+The dataset that I’ll use is Boston House Prices.
+
+There are 13 features in Inputs. Those are the input features in order
+
+1) CRIM: per capita crime rate by town
+
+2) ZN: proportion of residential land zoned for lots over 25,000 sq.ft.
+
+3) INDUS: proportion of non-retail business acres per town
+
+4) CHAS: Charles River dummy variable (1 if tract bounds river; 0 otherwise)
+
+5) NOX: nitric oxides concentration (parts per 10 million) [parts/10M]
+
+6) RM: average number of rooms per dwelling
+
+7) AGE: proportion of owner-occupied units built prior to 1940
+
+8) DIS: weighted distances to five Boston employment centres
+
+9) RAD: index of accessibility to radial highways
+
+10) TAX: full-value property-tax rate per $10,000 [$/10k]
+
+11) PTRATIO: pupil-teacher ratio by town
+
+12) B: The result of the equation B=1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town
+
+13) LSTAT: % lower status of the population
+
+And the output variable is MEDV: Median value of owner-occupied homes in $1000's [k$]
